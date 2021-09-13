@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF App</title>
+  <style>
+    body { padding: 256px }
+    button { display: none; width: 50%; padding: 16px 0; margin: 16px auto }
+  </style>
+</head>
+<body>
+  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+  <script>
+    async function sendShare() {
+      const result = await liff.shareTargetPicker([
+        {
+          "type": "flex",
+          "altText": "Profile",
+          "contents": {
+  "type": "bubble",
+  "size": "giga",
+  "hero": {
+    "type": "image",
+    "url": "https://sv1.picz.in.th/images/2021/09/13/C5yZ7J.jpg",
+    "size": "full",
+    "aspectMode": "cover",
+    "aspectRatio": "18:4"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5FKkk.png",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "offsetTop": "sm",
+            "offsetBottom": "sm",
+            "offsetStart": "none",
+            "offsetEnd": "sm",
+            "action": {
+              "type": "uri",
+              "label": "action",
+              "uri": "https://www.starfishlabz.com/app?openExternalBrowser=1"
+            }
+          },
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5yE50.jpg",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "ข้อ 1. ทาน",
+              "uri": "https://www.starfishlabz.com/app/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/108-%E0%B8%84%E0%B8%B4%E0%B8%94%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3%E0%B9%83%E0%B8%AB%E0%B9%89%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%82%E0%B8%A2%E0%B8%99%E0%B8%B4%E0%B9%82%E0%B8%AA%E0%B8%A1%E0%B8%99%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3"
+            },
+            "offsetTop": "sm",
+            "offsetBottom": "sm",
+            "offsetStart": "xs",
+            "offsetEnd": "md"
+          },
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5ysol.jpg",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "ข้อ 2. ศีล",
+              "uri": "https://www.starfishlabz.com/app/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/109-%E0%B8%A7%E0%B8%B4%E0%B8%9B%E0%B8%B1%E0%B8%AA%E0%B8%AA%E0%B8%99%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%99%E0%B8%A7%E0%B8%AA%E0%B8%95%E0%B8%B4%E0%B8%9B%E0%B8%B1%E0%B8%8F%E0%B8%90%E0%B8%B2%E0%B8%99-4"
+            },
+            "offsetTop": "sm",
+            "offsetBottom": "sm",
+            "offsetStart": "sm",
+            "offsetEnd": "md"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5y8SV.jpg",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "ข้อ 3. ปริจจาคะ",
+              "uri": "https://www.starfishlabz.com/app/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/194-%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%A9%E0%B8%93%E0%B8%B0%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%A8%E0%B8%B5%E0%B8%A5%E0%B8%98%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B2%E0%B8%8A%E0%B8%B5%E0%B8%9E"
+            },
+            "offsetTop": "xs",
+            "offsetBottom": "sm",
+            "offsetStart": "none",
+            "offsetEnd": "sm"
+          },
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5yXIn.jpg",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "ข้อ 4. อาชชวะ",
+              "uri": "https://www.starfishlabz.com/app/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/195-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%A2%E0%B8%AA%E0%B8%B1%E0%B8%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99-ariyasacca-based-learning-abl"
+            },
+            "offsetTop": "xs",
+            "offsetBottom": "sm",
+            "offsetStart": "xs",
+            "offsetEnd": "md"
+          },
+          {
+            "type": "image",
+            "url": "https://sv1.picz.in.th/images/2021/09/13/C5yGJ2.jpg",
+            "size": "full",
+            "aspectRatio": "1:1",
+            "aspectMode": "cover",
+            "action": {
+              "type": "uri",
+              "label": "ข้อ 5. มัททวะ",
+              "uri": "https://www.starfishlabz.com/app/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/196-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%83%E0%B8%9D%E0%B9%88%E0%B8%A3%E0%B8%B9%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%A3%E0%B8%B4%E0%B8%A2%E0%B8%AA%E0%B8%B1%E0%B8%88%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%90%E0%B8%B2%E0%B8%99-ariyasacca-based-learning-abl"
+            },
+            "offsetTop": "xs",
+            "offsetBottom": "sm",
+            "offsetStart": "sm",
+            "offsetEnd": "md"
+          }
+        ]
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "= ให้คลิกที่ภาพ แต่ละภาพ เพื่อดูรายละเอียด =",
+            "align": "center",
+            "margin": "md",
+            "color": "#ffffff",
+            "offsetTop": "sm"
+          },
+          {
+            "type": "separator",
+            "margin": "lg",
+            "color": "#FFFFFF"
+          },
+          {
+            "type": "text",
+            "text": "♫ วิธีลงทะเบียนเรียน starfishlabz",
+            "margin": "xl",
+            "color": "#FFFFFF",
+            "offsetStart": "xxl",
+            "size": "lg",
+            "action": {
+              "type": "uri",
+              "label": "เว็ปไซต์พอเพียง ",
+              "uri": "https://www.youtube.com/watch?v=S49Wq2lbo38?openExternalBrowser=1"
+            }
+          },
+          {
+            "type": "separator",
+            "color": "#FFFFFF",
+            "margin": "lg"
+          },
+          {
+            "type": "text",
+            "text": "♫ Facebook",
+            "margin": "lg",
+            "color": "#FFFFFF",
+            "offsetStart": "xxl",
+            "size": "lg",
+            "action": {
+              "type": "uri",
+              "label": "Facebook ",
+              "uri": "https://web.facebook.com/krupramahachula"
+            }
+          },
+          {
+            "type": "separator",
+            "color": "#FFFFFF",
+            "margin": "lg"
+          },
+          {
+            "type": "text",
+            "text": "♫ Line (ห้องเรียนรู้การสอนพระพุทธศาสนา)",
+            "margin": "md",
+            "size": "lg",
+            "color": "#FFFFFF",
+            "offsetStart": "xxl",
+            "action": {
+              "type": "uri",
+              "label": "Line",
+              "uri": "https://line.me/ti/g2/9nthDVXK1DCDpafqHwkTDw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+            }
+          },
+          {
+            "type": "separator",
+            "margin": "lg",
+            "color": "#FFFFFF"
+          }
+        ]
+      }
+    ],
+    "paddingAll": "xs",
+    "backgroundColor": "#171f69"
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": ">> 웃 ส่งต่อให้เพื่อนๆ ღ",
+        "align": "end",
+        "offsetEnd": "lg",
+        "color": "#ffffff",
+        "action": {
+          "type": "uri",
+          "label": "ส่งต่อให้เพื่อน",
+          "uri": "https://liff.line.me/1655879041-4KWz3qNE"
+        },
+        "size": "md"
+      }
+    ],
+    "backgroundColor": "#224dac"
+  }
+}
+        }
+      ])
+      if (result) {
+        alert(`[${result.status}] Message sent!`)
+      } else {
+        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
+          return
+        }
+
+        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
+          alert('ShareTargetPicker was canceled in LINE app')
+        }
+      }
+    }
+    function logOut() {
+      liff.logout()
+      window.location.reload()
+    }
+    async function main() {
+      await liff.init({ liffId: "1655879041-4KWz3qNE" })
+      if (liff.isLoggedIn()) {
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
+        }
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
+      }
+    }
+    main()
+  </script>
+</body>
+</html>
